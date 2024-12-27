@@ -5,6 +5,7 @@ import {
   getAllBlogs,
   getBlog,
   updateBlog,
+  userBlog,
 } from "../Controller/blogController.js";
 
 const route = express.Router();
@@ -23,5 +24,8 @@ route.put("/update-blog/:id", updateBlog);
 
 // delete blog
 route.delete("/delete-blog/:id", deleteBlog);
+
+// get user blogs
+route.get("/user-blogs/:id", userBlog);
 
 export default route;
